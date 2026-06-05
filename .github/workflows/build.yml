@@ -18,15 +18,17 @@ jobs:
         with:
           distribution: temurin
           java-version: '11'
+          cache: gradle
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
+          yes | sdkmanager --licenses
+          sdkmanager "platforms;android-29" "build-tools;29.0.3"
 
-      - name: Accept licenses
-        run: yes | sdkmanager --licenses
-
-      - name: Install SDK components
-        run: sdkmanager "platforms;android-29" "build-tools;29.0.3"
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
       - name: Build debug APK
         run: ./gradlew assembleDebug --no-daemon --stacktrace
