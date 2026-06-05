@@ -24,7 +24,7 @@ class ActivityUtils(private val context: Context) {
             Build.MODEL, Build.DEVICE
         )
         AlertDialog.Builder(context)
-            .setPositiveButton("OK") { _, _ -> }
+            .setPositiveButton(android.R.string.ok) { _, _ -> }
             .setTitle(R.string.error_not_supported)
             .setMessage(message)
             .create()

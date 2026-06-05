@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="qs_label">宽屏模式</string>
+    <string name="error_remote_exception">切换模式时发生错误。</string>
+    <string name="error_no_secure_writeable">请在系统设置中开启「与主屏幕保持相同亮度」。</string>
+    <string name="tasker_message">此插件无设置项。</string>
+    <string name="tasker_plugin_name">切换宽屏模式</string>
+    <string name="tasker_plugin_mode_on">开启</string>
+    <string name="tasker_plugin_mode_off">关闭</string>
+    <string name="tasker_plugin_mode_toggle">切换</string>
+    <string name="error_not_supported">不支持</string>
+    <string name="error_not_supported_text">您的设备「%1$s (%2$s)」不支持宽屏模式。</string>
+    <string name="settings_experimental">实验性功能</string>
+    <string name="settings_ignore_secure_writable">忽略系统设置检查</string>
+</resources>
